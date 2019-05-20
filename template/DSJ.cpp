@@ -16,8 +16,8 @@ public:
         return sz[find(x)];
     }
     void con(int x,int y) {
-        x = fa[x];
-        y = fa[y];
+        x = find(x);
+        y = find(y);
         if (x==y) return;
         fa[x] = y;
         sz[y] += sz[x];
